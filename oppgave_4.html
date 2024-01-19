@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>oppgave_4</title>
+  </head>
+  <body>
+    <p id="image-txt"></p>
+    <div id="image-container"></div>
+    <script>
+      const imageContainer = document.getElementById("image-container");
+      const imageTxt = document.getElementById("image-txt");
+      const imgArray = [
+        "flowers.jpg",
+
+        "sunset.jpg",
+        "forest.jpg",
+        "vibrant.jpg",
+        "leaves.png",
+      ];
+      imageTxt.innerHTML = `det finnes: ${imgArray.length} bilder i arrayet`;
+
+      for (let i = 0; i < imgArray.length; i++) {
+        imageContainer.innerHTML += `<img src="assets/${imgArray[i]}" style="width: 200px;"/>`;
+      }
+    </script>
+  </body>
+</html>
