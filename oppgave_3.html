@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>oppgave_3</title>
+  </head>
+  <body>
+    <input type="button" id="increase-cat-btn" value="katteknapp" />
+    <p id="cat-txt">Antall katter:</p>
+    <div id="cat-container"></div>
+    <script>
+      const increaseCatBtn = document.getElementById("increase-cat-btn");
+      const catTxt = document.getElementById("cat-txt");
+      const catContainer = document.getElementById("cat-container");
+
+      let catCounter = 0;
+
+      increaseCatBtn.onclick = increaceCatCounter;
+
+      function increaceCatCounter() {
+        catCounter++;
+        catTxt.innerHTML = `Antall katter: ${catCounter}`;
+        showCats(catCounter);
+      }
+
+      function showCats(counter) {
+        catContainer.innerHTML = "";
+
+        console.log("inne i showcats", counter);
+        for (let i = 0; i < counter; i++) {
+          catContainer.innerHTML += `<img src="assets/katt.jpg" style="width: 200px" />`;
+        }
+      }
+    </script>
+  </body>
+</html>
