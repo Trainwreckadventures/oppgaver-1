@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>oppgave_5</title>
+  </head>
+
+  <body>
+    <input type="button" id="start-btn" value="start" />
+    <ul id="random-number-list"></ul>
+
+    <script>
+      const randomNumberList = document.getElementById("random-number-list");
+      const startBtn = document.getElementById("start-btn");
+
+      startBtn.onclick = randomNumbers;
+
+      function randomNumbers() {
+        randomNumberList.innerHTML = "";
+
+        for (var i = 0; i < 100; i++) {
+          let randomNumbers = Math.floor(Math.random() * 100);
+          randomNumberList.innerHTML += `<li>${randomNumbers}</li>`;
+        }
+      }
+    </script>
+  </body>
+</html>
