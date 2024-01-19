@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>oppgave_2</title>
+  </head>
+  <body>
+    <input type="text" placeholder="navn på film" id="movie-name" />
+    <input type="text" placeholder="året filmen kom ut" id="movie-year" />
+    <input type="button" id="movie-btn" value="send" />
+    <p id="movie-txt"></p>
+    <script>
+      const movieBtn = document.getElementById("movie-btn");
+      const movieTxt = document.getElementById("movie-txt");
+
+      movieBtn.onclick = getMovieInfo;
+
+      function getMovieInfo() {
+        const movieNameValue = document.getElementById("movie-name").value;
+        const movieYearValue = document.getElementById("movie-year").value;
+
+        showMovieInfo(movieNameValue, movieYearValue);
+      }
+
+      function showMovieInfo(movieName, movieYear) {
+        movieTxt.innerHTML = `filmen ${movieName} kom ut i ${movieYear}`;
+      }
+    </script>
+  </body>
+</html>
