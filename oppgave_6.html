@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>oppgave_6</title>
+  </head>
+
+  <body>
+    <input type="text" placeholder="husk å ta med..." id="my-txt" />
+    <input type="button" value="legg til" id="my-list-btn" />
+    <ul id="my-stuff"></ul>
+
+    <script>
+      const myTxt = document.getElementById("my-txt");
+      const myListBtn = document.getElementById("my-list-btn");
+      const myStuff = document.getElementById("my-stuff");
+      let myStuffArray = ["medisin", "badeand", "pysjamas"];
+
+      showMyStuff();//må denne defineres mer? 
+      myListBtn.onclick = addToMyList;
+
+      function addToMyList() {
+        myStuff.innerHTML = "";
+
+        if (myTxt.value == "") {
+          alert("Du må skrive inn det du skal ta med deg i tekstfeltet!");
+        } else {
+          const myTxtValue = myTxt.value;
+          myStuffArray.push(myTxtValue);
+          myTxt.value = "";
+          showMyStuff();
+        }
+      }
+
+      function showMyStuff() {
+        for (let i = 0; i < myStuffArray.length; i++) {
+          myStuff.innerHTML += `<li>${myStuffArray[i]}</li>`;
+//her er det noe feil...
+        }
+      }
+    </script>
+  </body>
+</html>
