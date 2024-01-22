@@ -1,0 +1,29 @@
+body {
+  background-color: rgb(42, 34, 76);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+div {
+  max-width: 50%;
+  height: auto;
+  font-weight: lighter;
+  font-size: large;
+  text-align: center;
+  color: rgb(145, 227, 20);
+}
+
+button {
+ background-color: #133c57;
+  border: none; 
+  padding: 10px 20px; 
+  cursor: pointer; 
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+background-color: #20608b;
+}
