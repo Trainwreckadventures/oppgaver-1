@@ -34,6 +34,8 @@
       }
 
       function showMyStuff() {
+        //i referer til "index", brukt som placeholder i loops.
+        //husk å stave .length riktig (t og h bytter ofte plass hos deg...)
         for (let i = 0; i < myStuffArray.length; i++) {
           myStuff.innerHTML += `<li>${myStuffArray[i]}</li>`;
         }
