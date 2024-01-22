@@ -17,7 +17,7 @@
       const myStuff = document.getElementById("my-stuff");
       let myStuffArray = ["medisin", "badeand", "pysjamas"];
 
-      showMyStuff();//må denne defineres mer? 
+      showMyStuff(); //må denne defineres mer?
       myListBtn.onclick = addToMyList;
 
       function addToMyList() {
@@ -36,7 +36,6 @@
       function showMyStuff() {
         for (let i = 0; i < myStuffArray.length; i++) {
           myStuff.innerHTML += `<li>${myStuffArray[i]}</li>`;
-//her er det noe feil...
         }
       }
     </script>
